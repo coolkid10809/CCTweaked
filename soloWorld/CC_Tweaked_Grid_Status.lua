@@ -1,3 +1,9 @@
+--[[Base Grid Status Monitor
+Designed for an individual computer - recreation required for new computers
+Do not use without permission from the creator
+Created by: Coolkid10809
+Pastebin "https://pastebin.com/f2gaFKam"
+Github Repo: "https://github.com/coolkid10809/CCTweaked/blob/main/soloWorld/CC_Tweaked_Grid_Status.lua"]]
 center = 6
 middle = 14
 monitor = peripheral.wrap("monitor_3")

@@ -1,4 +1,9 @@
-
+--[[Day Time Footer
+unused
+Do not use without permission from the creator
+Created by: Coolkid10809
+Pastebin "https://pastebin.com/0U6bT0U2"
+github Repo: "https://github.com/coolkid10809/CCTweaked/blob/main/soloWorld/CC-Tweaked_day_time_footer.lua"]]
 local monitor = peripheral.wrap("monitor_0")
 local size = { monitor.getSize() }
 local bottom = size[2]

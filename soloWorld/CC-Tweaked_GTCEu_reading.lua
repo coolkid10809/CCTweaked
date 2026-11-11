@@ -1,3 +1,9 @@
+--[[GTCEu Base Data Monitor
+Designed for an individual computer - recreation required for new computers
+Do not use without permission from the creator
+Created by: Coolkid10809
+Pastebin "https://pastebin.com/mSC1VBZE"
+Github Repo: "https://github.com/coolkid10809/CCTweaked/blob/main/soloWorld/CC-Tweaked_GTCEu_reading.lua"]]
 middle = 25
 center = 13
 parallel.waitForAny(
@@ -182,14 +188,14 @@ parallel.waitForAny(
                             monitor_1.write("=")
                             i = i + 1
                         end
-                        monitor.setCursorPos(1, bottom)
-                        monitor.write(weekday .. " " .. date .. " " .. time .. " | " .. textutils.formatTime(os.time()))
+                        monitor_1.setCursorPos(1, bottom)
+                        monitor_1.write(weekday .. " " .. date .. " " .. time .. " | " .. textutils.formatTime(os.time()))
                 sleep(.25)
             end
         end
     end,
     function()
-        local modem = peripheral.find("modem")
+        modem = peripheral.wrap("modem_1")
         if not modem then
             error("No modem found")
         end
@@ -199,11 +205,11 @@ parallel.waitForAny(
         modem.open(0)
         while true do
             local event, side, channel, replyChannel, message, distance = os.pullEvent("modem_message")
-            if channel == 0 and message == "baseDataOpenRequest" then
+            if channel == 0 and message == "baseDataOpenRequest coolkid10809" then
                 local pocketChannel = replyChannel
                 print("Base Data Open Request Received")
                 print("Opening Base Data...")
-                modem.transmit(pocketChannel, selfChannel, "baseDataOpened")
+                modem.transmit(pocketChannel, selfChannel, "baseDataOpened coolkid10809")
                 modem.close(0)
                 break
             end
